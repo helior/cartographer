@@ -1,3 +1,7 @@
-.user-input {
+.input-row {
   background:#eee;
+}
+
+.map-row .col {
+  padding:0;
 }

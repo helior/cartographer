@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 class UserInput extends React.Component {
+  static propTypes = {
+    searchUrl: PropTypes.string,
+    googleApiKey: PropTypes.string
+  }
+  
   render() {
     return (
       <Form inline className="m-2">
@@ -21,11 +26,5 @@ class UserInput extends React.Component {
     )
   }
 }
-
-UserInput.propTypes = {
-  searchUrl: PropTypes.string,
-  googleApiKey: PropTypes.string
-}
-
 
 export default UserInput;
