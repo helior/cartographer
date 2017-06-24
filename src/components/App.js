@@ -1,4 +1,5 @@
-import getParameterByName from '../lib/getParameterByName';
+import getParameterByName from '../lib/utils/getParameterByName';
+import scrapeSearchUrl from '../lib/scrapeSearchUrl';
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 
@@ -31,8 +32,20 @@ class App extends Component {
   componentDidMount() {
     if (this.hasRequiredInput()) {
       this.setState({isLoading: true});
+      // scrapeSearchUrl(this.state.searchUrl)
+      //   .then(results => {
+      //     console.log(results);
+      //   })
+      //   .catch(e => {
+      //     console.log(e);
+      //   })
+
       // HTTP request...
-      // then( set marker state)
+      // then( set marker state )
+
+      // DEVELOPMENT OF THIS PROJECT HALTED BECAUSE I REALIZE I CAN'T MAKE
+      // CROSS-ORIGIN API REQUESTS FROM THE BROWSER. WILL NEED TO REVISIT WITH A
+      // SERVER BACKEND.
     }
   }
 
